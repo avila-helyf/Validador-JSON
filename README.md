@@ -45,4 +45,4 @@ Como o projeto utiliza tecnologias nativas da web, não há necessidade de insta
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/avila-helyf/Validador-JSON.git](https://github.com/avila-helyf/Validador-JSON.git)
+   git clone https://github.com/avila-helyf/Validador-JSON.git
