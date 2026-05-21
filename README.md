@@ -1,5 +1,8 @@
 # Formatador e Validador de JSON Avançado
 
+<img width="400" height="224" alt="Gravação de Tela 2026-05-21 112846" src="https://github.com/user-attachments/assets/692476f9-9862-41df-9471-81ab964f57d2" />
+
+
 Uma ferramenta web leve, performática e focada na produtividade de desenvolvedores e analistas técnico-operacionais. Permite a validação estrutural de dados no formato JSON, além de oferecer recursos essenciais de formatação, minificação e manipulação de objetos diretamente no navegador.
 
 > **Acesse a aplicação rodando ao vivo:** [Link do seu GitHub Pages ou Vercel aqui]
