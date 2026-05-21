@@ -1,0 +1,364 @@
+/* 1. RESET BÁSICO (Remove margens padrão do navegador) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f6f8; /* Um fundo levemente cinza para o site */
+}
+
+/* 2. ESTILIZAÇÃO DO HEADER */
+.main-header {
+  background-color: #ffffff; /* Fundo branco como no print */
+  border-bottom: 1px solid #e1e4e6; /* Linha sutil bem embaixo do cabeçalho */
+  width: 100%;
+}
+
+/* 3. CONTAINER DE CONTEÚDO (Centraliza o conteúdo na tela) */
+.header-container {
+  max-width: 1200px; /* Limita a largura máxima para não espalhar em telas ultra-wides */
+  margin: 0 auto; /* Centraliza o bloco na tela */
+  padding: 15px 20px; /* Dá um respiro em cima/baixo (15px) e nas laterais (20px) */
+
+  /* O truque do Flexbox para alinhar as coisas */
+  display: flex;
+  justify-content: center; /* Centraliza HORIZONTALMENTE (no meio da tela) */
+
+  align-items: center; /* Alinha a imagem e o texto verticalmente no centro */
+}
+/* 4. ESTILO DO LOGO (Link, Imagem e Texto) */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove aquele sublinhado azul padrão de links */
+  color: #333333; /* Cor do texto escura, mas amigável */
+  gap: 12px; /* Cria um espaço perfeito entre a imagem e o texto */
+}
+
+.logo-img {
+  height: 40px; /* Ajusta o tamanho da imagem para caber bem na barra */
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+.logo-text {
+  font-size: 1.2rem; /* Deixa o tamanho da fonte proporcional */
+}
+
+.texto-apresentacao {
+  font-size: 1rem;
+  color: red; /* Mantém o seu texto vermelho */
+
+  font-family: monospace; /* Essencial para o efeito funcionar certinho */
+  display: inline-block;
+  white-space: nowrap; /* Impede o texto de quebrar linha */
+  overflow: hidden; /* Esconde as letras até que sejam "digitadas" */
+  border-right: 3px solid red; /* Cursor piscante vermelho combinando com seu texto */
+
+  /* Animação: dura 3.5 segundos, tem 35 passos (letras), e fica repetindo em vai e vem */
+  animation:
+    typing 3.5s steps(35, end) infinite alternate,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Engrenagem que faz o texto aparecer */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Engrenagem que faz o cursor piscar */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
+  } /* Cor do cursor piscando */
+}
+
+/* ==========================================
+   4. ESTILIZAÇÃO DA HERO SECTION (DESTAQUE)
+   ========================================== */
+
+.hero-section {
+  background-color: #051d3b; /* Tom de azul escuro idêntico ao do print */
+  color: #ffffff; /* Define a cor do texto como branca */
+  width: 100%;
+  padding: 60px 20px; /* Dá um bom espaço interno em cima/baixo e nas laterais */
+  text-align: center; /* Centraliza todos os textos automaticamente */
+}
+
+.hero-container {
+  width: 100%; /* Força o container a usar 100% da largura da tela */
+  max-width: 100%; /* Remove qualquer limite de largura (ex: os 900px de antes) */
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #e1e4e6;
+  line-height: 1.6;
+
+  /* Garante que o parágrafo tente ocupar a linha toda antes de pensar em quebrar */
+  display: block;
+  width: 100%;
+}
+
+/* ==========================================
+   5. ESTILIZAÇÃO DO BREADCRUMB
+   ========================================== */
+
+.breadcrumb {
+  background-color: #ffffff; /*#ffffff Fundo branco puro */
+  width: 100%;
+  border-bottom: 1px solid #e1e4e6; /* Uma linha sutil separando ele do bloco escuro */
+}
+
+.breadcrumb-container {
+  max-width: 1200px; /* Mantém o mesmo alinhamento do container da Navbar */
+  margin: 0 auto;
+  padding: 12px 20px; /* Um espaçamento mais fino por ser apenas uma linha de texto */
+  display: flex;
+  justify-content: center; /* Centraliza HORIZONTALMENTE (no meio da tela) */
+  align-items: center;
+  gap: 8px; /* Espaçamento idêntico entre o link, a barra / e o texto atual */
+  font-size: 0.9rem; /* Texto um pouco menor que o padrão, bem característico de breadcrumbs */
+}
+
+/* Estilo do link "Ferramentas Gratuitas" */
+.breadcrumb-link {
+  color: #1a5c96; /* Tom de azul para links comum em ferramentas */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Espaço entre a casinha e o texto */
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline; /* Um efeito visual clássico ao passar o mouse */
+}
+
+/* Estilo do separador "/" */
+.separator {
+  color: #8c9ba5; /* Um cinza neutro para não chamar mais atenção que os textos */
+}
+
+/* Estilo da página atual */
+.current-page {
+  color: #051d3b; /* Mesma cor escura do bloco para dar destaque */
+  font-weight: 700; /* Negrito como no print */
+}
+/* ==========================================
+   6. PAINEL PRINCIPAL DO VALIDADOR
+   ========================================== */
+
+.validator-main {
+  padding: 40px 20px;
+  background-color: #f4f6f8; /* Fundo cinza claro para destacar o painel branco */
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 8px; /* Bordas arredondadas do painel */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil em volta */
+  border: 1px solid #e1e4e6;
+  overflow: hidden; /* Garante que os filhos respeitem o arredondamento */
+}
+
+/* BARRA SUPERIOR */
+.toolbar-top {
+  display: flex;
+  justify-content: space-between; /* Botões na esquerda, Status na direita */
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e1e4e6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* BOTÕES DE AÇÃO */
+.btn-action {
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-active {
+  background-color: #a2c639; /* Verde limão do botão ativo */
+  color: #ffffff;
+}
+
+.btn-dark {
+  background-color: #051d3b; /* Azul escuro pros outros botões */
+  color: #ffffff;
+}
+
+.btn-clear {
+  background: none;
+  border: 1px solid #e1e4e6;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* STATUS (Padrão/Sucesso) */
+.status-badge {
+  background-color: #f0f7db; /* Fundo verde clarinho */
+  color: #7a9a1a; /* Texto verde escuro */
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block; /* Garante o comportamento correto do padding */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease; /* Efeito suave ao trocar de cor */
+}
+
+/* Significa: quando o span dentro de .status-badge ganhar a classe error */
+/* DEPOIS: Aplica quando a PRÓPRIA badge tiver a classe error */
+.status-badge.error {
+  background-color: #fbe7e9;
+  color: #c92a2a;
+}
+
+/* BARRA DE OPÇÕES SECUNDÁRIA */
+.toolbar-options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #f8fafd; /* Um fundo levemente azulado/cinza */
+  border-bottom: 1px solid #e1e4e6;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.indent-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-indent {
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-indent.active {
+  border-color: #051d3b;
+  font-weight: bold;
+}
+/* ==========================================
+   7. ÁREA DOS EDITORES (ENTRADA / SAÍDA)
+   ========================================== */
+
+.editors-container {
+  display: flex; /* Faz a Entrada e a Saída ficarem lado a lado */
+  min-height: 400px; /* Garante uma altura mínima confortável para o validador */
+  background-color: #ffffff;
+}
+
+.editor-block {
+  flex: 1; /* Faz com que os dois blocos tenham exatamente o mesmo tamanho (50% cada) */
+  display: flex;
+  flex-direction: column; /* Coloca o cabeçalho no topo e a área de texto ocupando o resto */
+}
+
+/* Cria a linha vertical divisória exatamente no meio */
+.target-block {
+  border-left: 1px solid #e1e4e6;
+}
+
+/* Cabeçalho interno (Entrada / Saída) */
+.editor-header {
+  flex: 0.1; /* <-- ESSA LINHA AQUI! */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #f8fafd; /* Fundo cinza bem clarinho igual ao do print */
+  border-bottom: 1px solid #e1e4e6;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-mini {
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn-mini:hover {
+  background-color: #f1f3f5;
+}
+
+/* Área de digitação (Entrada) */
+.code-input {
+  width: 100%;
+  height: 100%;
+  flex: 1; /* Força a caixa a preencher todo o espaço vertical disponível */
+  border: none;
+  resize: none; /* Remove aquela barrinha de arrastar do canto inferior direito */
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace; /* Fonte estilo código */
+  font-size: 0.95rem;
+  color: #333333;
+  outline: none; /* Tira aquela borda preta ou azul feia ao clicar na caixa */
+  line-height: 1.5;
+}
+
+/* Área de exibição (Saída) */
+.code-output {
+  padding: 20px;
+  flex: 1;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333333;
+  overflow-y: auto; /* Se o JSON for gigante, cria uma barra de rolagem interna */
+}
+
+.code-output pre {
+  margin: 0;
+  white-space: pre-wrap; /* Mantém as quebras de linha e tabulações do JSON */
+}

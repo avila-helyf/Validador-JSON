@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validador Json</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <a href="#" class="logo-link">
+          <img
+            src="style/logo-project.png"
+            alt="Logo projeto"
+            class="logo-img"
+          />
+          <span class="logo-text"
+            ><strong>Formatador e Validador de JSON</strong></span
+          >
+          <span class="texto-apresentacao"
+            >Seja bem-vindo ao nosso validador! :D</span
+          >
+        </a>
+      </div>
+    </header>
+
+    <nav class="breadcrumb">
+      <div class="breadcrumb-container">
+        <a href="#" class="breadcrumb-link">
+          <span class="home-icon">🏠</span> Ferramentas Gratuitas
+        </a>
+        <span class="separator">/</span>
+        <span class="current-page">Formatador e Validador de JSON</span>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="hero-container">
+        <h1>Formatador e Validador de JSON</h1>
+        <p>
+          Cole o seu JSON para formatá-lo, minimizá-lo ou validá-lo. Tudo roda
+          no browser — nenhum dado é enviado a servidores.
+        </p>
+      </div>
+    </section>
+
+    <main class="validator-main">
+      <div class="main-container">
+        <div class="toolbar-top">
+          <div class="action-buttons">
+            <button class="btn-action btn-active" id="btn-formatar">
+              FORMATAR / EMBELEZAR
+            </button>
+            <button class="btn-action btn-dark" id="btn-minificar">
+              MINIFICAR
+            </button>
+            <button class="btn-action btn-dark" id="btn-validar">
+              VALIDAR
+            </button>
+            <button class="btn-clear" id="btn-limpar">✕</button>
+          </div>
+
+          <div class="status-badge">
+            <span>Insira seu JSON :D</span>
+          </div>
+        </div>
+
+        <div class="toolbar-options">
+          <div class="indent-options">
+            <span>Tamanho do recuo:</span>
+            <button class="btn-indent active" id="btn-recuo-2">2</button>
+            <button class="btn-indent" id="btn-recuo-4">4</button>
+          </div>
+
+          <div class="sort-options">
+            <label>
+              <input type="checkbox" id="chk-ordenar" /> Ordenar chaves
+            </label>
+          </div>
+        </div>
+
+        <div class="editors-container">
+          <div class="editor-block">
+            <div class="editor-header">
+              <span>Entrada</span>
+            </div>
+            <textarea
+              class="code-input"
+              placeholder="Cole seu JSON bagunçado aqui..."
+            ></textarea>
+          </div>
+
+          <div class="editor-block target-block">
+            <div class="editor-header">
+              <span>Saída</span>
+              <div class="editor-actions">
+                <button class="btn-mini" id="btn-copiar" title="Copiar">
+                  📋
+                </button>
+                <button class="btn-mini" id="btn-baixar" title="Baixar arquivo">
+                  📥
+                </button>
+              </div>
+            </div>
+            <div class="code-output">
+              <pre><code>{"Choose Kindness" : "❤️"}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script/main.js"></script>
+  </body>
+</html>
