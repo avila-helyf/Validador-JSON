@@ -5,8 +5,7 @@
 
 Uma ferramenta web leve, performática e focada na produtividade de desenvolvedores e analistas técnico-operacionais. Permite a validação estrutural de dados no formato JSON, além de oferecer recursos essenciais de formatação, minificação e manipulação de objetos diretamente no navegador.
 
-> **Acesse a aplicação rodando ao vivo:** [Link do seu GitHub Pages ou Vercel aqui]
-
+> 🚀 [Clique aqui para testar a aplicação do Validador JSON ao vivo](https://avila-helyf.github.io/Validador-JSON/)
 ---
 
 ## 💡 Motivação do Projeto
